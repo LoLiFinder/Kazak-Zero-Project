@@ -23,6 +23,7 @@ namespace Kazak_Zero_Project
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mainDataSet12.car_report". При необходимости она может быть перемещена или удалена.
             this.car_reportTableAdapter.Fill(this.mainDataSet12.car_report);
 
+            this.reportViewer1.RefreshReport();
         }
     }
 }

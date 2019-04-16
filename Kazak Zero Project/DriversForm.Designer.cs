@@ -124,7 +124,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "DriversForm";
-            this.Text = "DriversForm";
+            this.Text = "Водители";
             this.Load += new System.EventHandler(this.DriversForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

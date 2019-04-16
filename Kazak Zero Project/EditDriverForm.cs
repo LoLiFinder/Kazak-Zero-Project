@@ -81,13 +81,13 @@ namespace Kazak_Zero_Project
             oleDb.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Данные изменены");
-            (Owner as CarForm)?.UpdateDataGridView();
+            (Owner as CarTForm)?.UpdateDataGridView();
         }
 
         private void EditDriverForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Enabled = true;
-            (Owner as CarForm)?.UpdateDataGridView();
+            (Owner as CarTForm)?.UpdateDataGridView();
         }
     }
 }

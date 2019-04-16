@@ -70,11 +70,41 @@
     <Compile Include="CarForm.Designer.cs">
       <DependentUpon>CarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CarReportForm.cs">
+    <Compile Include="ReportForm\CarReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CarReportForm.Designer.cs">
+    <Compile Include="ReportForm\CarReportForm.Designer.cs">
       <DependentUpon>CarReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\CarReportL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\CarReportL.Designer.cs">
+      <DependentUpon>CarReportL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\CarReportT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\CarReportT.Designer.cs">
+      <DependentUpon>CarReportT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\CarReportTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\CarReportTR.Designer.cs">
+      <DependentUpon>CarReportTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarTForm.Designer.cs">
+      <DependentUpon>CarTForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarTRForm.Designer.cs">
+      <DependentUpon>CarTRForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DriversForm.cs">
       <SubType>Form</SubType>
@@ -127,8 +157,23 @@
     <EmbeddedResource Include="CarForm.resx">
       <DependentUpon>CarForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CarReportForm.resx">
+    <EmbeddedResource Include="ReportForm\CarReportForm.resx">
       <DependentUpon>CarReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\CarReportL.resx">
+      <DependentUpon>CarReportL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\CarReportT.resx">
+      <DependentUpon>CarReportT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\CarReportTR.resx">
+      <DependentUpon>CarReportTR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTForm.resx">
+      <DependentUpon>CarTForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTRForm.resx">
+      <DependentUpon>CarTRForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DriversForm.resx">
       <DependentUpon>DriversForm.cs</DependentUpon>
@@ -154,7 +199,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReportCar.rdlc" />
+    <EmbeddedResource Include="ReportTR.rdlc" />
+    <EmbeddedResource Include="ReportT.rdlc" />
+    <EmbeddedResource Include="ReportL.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="mainDataSet11.xsc">
       <DependentUpon>mainDataSet11.xsd</DependentUpon>
     </None>

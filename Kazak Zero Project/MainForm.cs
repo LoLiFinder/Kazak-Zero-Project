@@ -34,5 +34,55 @@ namespace Kazak_Zero_Project
             CarForm carForm = new CarForm();
             carForm.Show();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            CarTForm carTForm = new CarTForm();
+            carTForm.Show();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            CarTRForm carTRForm = new CarTRForm();
+            carTRForm.Show();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            CarReportL carReportL = new CarReportL();
+            carReportL.Owner = this;
+            carReportL.Show();
+        }
+
+        private void Button9_Click(object sender, EventArgs e)
+        {
+            CarReportForm carReportL = new CarReportForm();
+            carReportL.Owner = this;
+            carReportL.Show();
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
+        {
+            CarReportTR car = new CarReportTR();
+            car.Owner = this;
+            car.Show();
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            CarReportT car = new CarReportT();
+            car.Owner = this;
+            car.Show();
+        }
     }
 }

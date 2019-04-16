@@ -196,7 +196,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox1);
             this.Name = "EditDriverForm";
-            this.Text = "EditDriverForm";
+            this.Text = "Изменить данные по водителю";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditDriverForm_FormClosed);
             this.Load += new System.EventHandler(this.EditDriverForm_Load);
             this.ResumeLayout(false);

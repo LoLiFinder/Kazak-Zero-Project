@@ -1,6 +1,6 @@
 ﻿namespace Kazak_Zero_Project
 {
-    partial class CarReportForm
+    partial class CarReportL
     {
         /// <summary>
         /// Required designer variable.
@@ -32,22 +32,25 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.mainDataSet12 = new Kazak_Zero_Project.mainDataSet12();
-            this.car_reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.car_reportTableAdapter = new Kazak_Zero_Project.mainDataSet12TableAdapters.car_reportTableAdapter();
+            this.car_report_lBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.car_report_lTableAdapter = new Kazak_Zero_Project.mainDataSet12TableAdapters.car_report_lTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataSet12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.car_reportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_report_lBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.car_reportBindingSource;
+            reportDataSource1.Value = this.car_report_lBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Kazak_Zero_Project.ReportCar.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 12);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Kazak_Zero_Project.ReportL.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(785, 426);
+            this.reportViewer1.Size = new System.Drawing.Size(776, 426);
             this.reportViewer1.TabIndex = 0;
             // 
             // mainDataSet12
@@ -55,26 +58,26 @@
             this.mainDataSet12.DataSetName = "mainDataSet12";
             this.mainDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // car_reportBindingSource
+            // car_report_lBindingSource
             // 
-            this.car_reportBindingSource.DataMember = "car_report";
-            this.car_reportBindingSource.DataSource = this.mainDataSet12;
+            this.car_report_lBindingSource.DataMember = "car_report_l";
+            this.car_report_lBindingSource.DataSource = this.mainDataSet12;
             // 
-            // car_reportTableAdapter
+            // car_report_lTableAdapter
             // 
-            this.car_reportTableAdapter.ClearBeforeFill = true;
+            this.car_report_lTableAdapter.ClearBeforeFill = true;
             // 
-            // CarReportForm
+            // CarReportL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "CarReportForm";
-            this.Text = "CarReportForm";
-            this.Load += new System.EventHandler(this.CarReportForm_Load);
+            this.Name = "CarReportL";
+            this.Text = "Отчет по легковым автомобилям";
+            this.Load += new System.EventHandler(this.CarReportL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainDataSet12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.car_reportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_report_lBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,8 +85,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource car_reportBindingSource;
+        private System.Windows.Forms.BindingSource car_report_lBindingSource;
         private mainDataSet12 mainDataSet12;
-        private mainDataSet12TableAdapters.car_reportTableAdapter car_reportTableAdapter;
+        private mainDataSet12TableAdapters.car_report_lTableAdapter car_report_lTableAdapter;
     }
 }

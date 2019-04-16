@@ -104,7 +104,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "OilForm";
-            this.Text = "OilForm";
+            this.Text = "Виды топлива";
             this.Load += new System.EventHandler(this.OilForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

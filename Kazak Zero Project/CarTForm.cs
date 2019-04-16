@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Kazak_Zero_Project
 {
-    public partial class CarForm : Form
+    public partial class CarTForm : Form
     {
-        public CarForm()
+        public CarTForm()
         {
             InitializeComponent();
         }
@@ -26,13 +26,13 @@ namespace Kazak_Zero_Project
 
         private void Fill_ComboBox()
         {
-            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter("SELECT * FROM type_car;",connectionString);
+            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter("SELECT * FROM type_car;", connectionString);
             DataTable data = new DataTable();
             oleDbDataAdapter.Fill(data);
             comboBox1.DataSource = data;
             comboBox1.DisplayMember = "type_car";
             comboBox1.ValueMember = "id_typecar";
-            
+
 
             oleDbDataAdapter = new OleDbDataAdapter("SELECT * FROM oil;", connectionString);
             data = new DataTable();
@@ -45,7 +45,7 @@ namespace Kazak_Zero_Project
 
         private void Fill_DataGridView()
         {
-            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter("SELECT car.id_car, type_car.type_car, car.state_number, car.name_car, oil.name_oil, car.norm_summer, car.norm_winter, car.coint_oil FROM (car INNER JOIN oil ON car.id_oil = oil.id_oil) INNER JOIN type_car ON car.id_typecar = type_car.id_typecar WHERE car.id_typecar = 2;", connectionString);
+            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter("SELECT car.id_car, type_car.type_car, car.state_number, car.name_car, oil.name_oil, car.norm_summer, car.norm_winter, car.coint_oil FROM (car INNER JOIN oil ON car.id_oil = oil.id_oil) INNER JOIN type_car ON car.id_typecar = type_car.id_typecar WHERE car.id_typecar = 1;", connectionString);
             DataTable data = new DataTable();
             oleDbDataAdapter.Fill(data);
             dataGridView1.DataSource = data;
@@ -68,13 +68,13 @@ namespace Kazak_Zero_Project
                     OleDbConnection connection = new OleDbConnection(connectionString);
                     connection.Open();
                     OleDbCommand oleDb = new OleDbCommand("INSERT INTO car (id_typecar,state_number,name_car,id_oil,norm_summer,norm_winter,coint_oil) VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", connection);
-                    oleDb.Parameters.Add("@p1",OleDbType.BigInt).Value = comboBox1.SelectedValue.ToString();
-                    oleDb.Parameters.Add("@p2",OleDbType.VarChar).Value = textBox2.Text;
-                    oleDb.Parameters.Add("@p3",OleDbType.VarChar).Value = textBox3.Text;
-                    oleDb.Parameters.Add("@p4",OleDbType.Integer).Value = comboBox2.SelectedValue.ToString();
-                    oleDb.Parameters.Add("@p5",OleDbType.Double).Value = maskedTextBox1.Text;
-                    oleDb.Parameters.Add("@p6",OleDbType.Double).Value = maskedTextBox2.Text;
-                    oleDb.Parameters.Add("@p7",OleDbType.Double).Value = maskedTextBox3.Text;
+                    oleDb.Parameters.Add("@p1", OleDbType.BigInt).Value = comboBox1.SelectedValue.ToString();
+                    oleDb.Parameters.Add("@p2", OleDbType.VarChar).Value = textBox2.Text;
+                    oleDb.Parameters.Add("@p3", OleDbType.VarChar).Value = textBox3.Text;
+                    oleDb.Parameters.Add("@p4", OleDbType.Integer).Value = comboBox2.SelectedValue.ToString();
+                    oleDb.Parameters.Add("@p5", OleDbType.Double).Value = maskedTextBox1.Text;
+                    oleDb.Parameters.Add("@p6", OleDbType.Double).Value = maskedTextBox2.Text;
+                    oleDb.Parameters.Add("@p7", OleDbType.Double).Value = maskedTextBox3.Text;
                     oleDb.ExecuteNonQuery();
                     connection.Close();
                     Fill_DataGridView();
@@ -85,7 +85,7 @@ namespace Kazak_Zero_Project
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter("SELECT car.id_car, type_car.type_car, car.state_number, car.name_car, oil.name_oil, car.norm_summer, car.norm_winter, car.coint_oil FROM (car INNER JOIN oil ON car.id_oil = oil.id_oil) INNER JOIN type_car ON car.id_typecar = type_car.id_typecar WHERE car.name_car Like \"%"+textBox1.Text+"%\" AND car.id_typecar = 2;", connectionString);
+            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter("SELECT car.id_car, type_car.type_car, car.state_number, car.name_car, oil.name_oil, car.norm_summer, car.norm_winter, car.coint_oil FROM (car INNER JOIN oil ON car.id_oil = oil.id_oil) INNER JOIN type_car ON car.id_typecar = type_car.id_typecar WHERE car.name_car Like \"%" + textBox1.Text + "%\" AND car.id_typecar = 1;", connectionString);
             DataTable data = new DataTable();
             oleDbDataAdapter.Fill(data);
             dataGridView1.DataSource = data;
@@ -106,7 +106,7 @@ namespace Kazak_Zero_Project
 
         private void DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             EditDriverForm edit = new EditDriverForm(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             edit.Owner = this;
             edit.Show();

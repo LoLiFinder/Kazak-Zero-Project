@@ -1,6 +1,6 @@
 ﻿namespace Kazak_Zero_Project
 {
-    partial class CarForm
+    partial class CarTForm
     {
         /// <summary>
         /// Required designer variable.
@@ -232,7 +232,7 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Поиск";
             // 
-            // CarForm
+            // CarTForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -255,8 +255,8 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "CarForm";
-            this.Text = "Легковые автомобили";
+            this.Name = "CarTForm";
+            this.Text = "Грузовые автомобили";
             this.Load += new System.EventHandler(this.CarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
