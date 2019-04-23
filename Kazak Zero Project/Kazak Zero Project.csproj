@@ -70,6 +70,18 @@
     <Compile Include="CarForm.Designer.cs">
       <DependentUpon>CarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="putListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="putListForm.Designer.cs">
+      <DependentUpon>putListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PutListReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PutListReport.Designer.cs">
+      <DependentUpon>PutListReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm\CarReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,13 @@
     <EmbeddedResource Include="CarForm.resx">
       <DependentUpon>CarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="putListForm.resx">
+      <DependentUpon>putListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PutListReport.resx">
+      <DependentUpon>PutListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PutReport.rdlc" />
     <EmbeddedResource Include="ReportForm\CarReportForm.resx">
       <DependentUpon>CarReportForm.cs</DependentUpon>
     </EmbeddedResource>
