@@ -80,7 +80,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
-          
             // 
             // textBox2
             // 
@@ -88,7 +87,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 3;
-           
             // 
             // label1
             // 
@@ -98,7 +96,6 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Тип ТС";
-           
             // 
             // label2
             // 
@@ -108,7 +105,6 @@
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Гос номер";
-         
             // 
             // textBox3
             // 
@@ -116,7 +112,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 20);
             this.textBox3.TabIndex = 6;
-  
             // 
             // label3
             // 
@@ -126,7 +121,6 @@
             this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Наименование ТС";
-  
             // 
             // comboBox2
             // 
@@ -136,7 +130,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 8;
-         
             // 
             // label4
             // 
@@ -146,7 +139,6 @@
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Вид топлива";
-         
             // 
             // label5
             // 
@@ -156,7 +148,6 @@
             this.label5.Size = new System.Drawing.Size(119, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Норма расхода летом";
-   
             // 
             // label6
             // 
@@ -166,7 +157,6 @@
             this.label6.Size = new System.Drawing.Size(120, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Норма расхода зимой";
-        
             // 
             // label7
             // 
@@ -176,7 +166,6 @@
             this.label7.Size = new System.Drawing.Size(110, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Количество топлива";
-
             // 
             // button1
             // 
@@ -195,7 +184,6 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(120, 20);
             this.maskedTextBox1.TabIndex = 17;
-   
             // 
             // maskedTextBox2
             // 
@@ -205,7 +193,6 @@
             this.maskedTextBox2.Size = new System.Drawing.Size(120, 20);
             this.maskedTextBox2.TabIndex = 18;
             this.maskedTextBox2.ValidatingType = typeof(int);
-        
             // 
             // maskedTextBox3
             // 
@@ -214,7 +201,6 @@
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(120, 20);
             this.maskedTextBox3.TabIndex = 19;
-    
             // 
             // contextMenuStrip1
             // 
@@ -259,7 +245,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CarForm";
-            this.Text = "CarForm";
+            this.Text = "Автомобили";
             this.Load += new System.EventHandler(this.CarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

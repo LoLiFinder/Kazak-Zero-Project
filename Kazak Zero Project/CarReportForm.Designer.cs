@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.mainDataSet12 = new Kazak_Zero_Project.mainDataSet12();
             this.car_reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainDataSet12 = new Kazak_Zero_Project.mainDataSet12();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.car_reportTableAdapter = new Kazak_Zero_Project.mainDataSet12TableAdapters.car_reportTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_reportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet12)).BeginInit();
             this.SuspendLayout();
+            // 
+            // car_reportBindingSource
+            // 
+            this.car_reportBindingSource.DataMember = "car_report";
+            this.car_reportBindingSource.DataSource = this.mainDataSet12;
+            // 
+            // mainDataSet12
+            // 
+            this.mainDataSet12.DataSetName = "mainDataSet12";
+            this.mainDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(785, 426);
             this.reportViewer1.TabIndex = 0;
             // 
-            // mainDataSet12
-            // 
-            this.mainDataSet12.DataSetName = "mainDataSet12";
-            this.mainDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // car_reportBindingSource
-            // 
-            this.car_reportBindingSource.DataMember = "car_report";
-            this.car_reportBindingSource.DataSource = this.mainDataSet12;
-            // 
             // car_reportTableAdapter
             // 
             this.car_reportTableAdapter.ClearBeforeFill = true;
@@ -71,10 +71,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "CarReportForm";
-            this.Text = "CarReportForm";
+            this.Text = "Отчет по автомобилям";
             this.Load += new System.EventHandler(this.CarReportForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_reportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet12)).EndInit();
             this.ResumeLayout(false);
 
         }
