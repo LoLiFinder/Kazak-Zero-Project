@@ -84,5 +84,19 @@ namespace Kazak_Zero_Project
             car.Owner = this;
             car.Show();
         }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            putListForm form = new putListForm();
+            form.Owner = this;
+            form.Show();
+        }
+
+        private void Button11_Click(object sender, EventArgs e)
+        {
+            PutListReport form = new PutListReport();
+            form.Owner = this;
+            form.Show();
+        }
     }
 }

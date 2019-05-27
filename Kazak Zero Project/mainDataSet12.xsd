@@ -2,11 +2,12 @@
 <xs:schema id="mainDataSet12" targetNamespace="http://tempuri.org/mainDataSet12.xsd" xmlns:mstns="http://tempuri.org/mainDataSet12.xsd" xmlns="http://tempuri.org/mainDataSet12.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mainConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mainConnectionString (Settings)" PropertyReference="ApplicationSettings.Kazak_Zero_Project.Properties.Settings.GlobalReference.Default.mainConnectionString" Provider="System.Data.OleDb" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mainConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mainConnectionString1 (Settings)" PropertyReference="ApplicationSettings.Kazak_Zero_Project.Properties.Settings.GlobalReference.Default.mainConnectionString1" Provider="System.Data.OleDb" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mainConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mainConnectionString2 (Settings)" PropertyReference="ApplicationSettings.Kazak_Zero_Project.Properties.Settings.GlobalReference.Default.mainConnectionString2" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mainConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mainConnectionString3 (Settings)" PropertyReference="ApplicationSettings.Kazak_Zero_Project.Properties.Settings.GlobalReference.Default.mainConnectionString3" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="carTableAdapter" GeneratorDataComponentClassName="carTableAdapter" Name="car" UserDataComponentName="carTableAdapter">
@@ -353,6 +354,34 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReportPutTableAdapter" GeneratorDataComponentClassName="ReportPutTableAdapter" Name="ReportPut" UserDataComponentName="ReportPutTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mainConnectionString3 (Settings)" DbObjectName="ReportPut" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_put, name_car, state_number, norm_summer, norm_winter, FIO, name_oil, com_s, com_e, date_s, date_e, oil_s, oil_e FROM ReportPut</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_put" DataSetColumn="id_put" />
+              <Mapping SourceColumn="name_car" DataSetColumn="name_car" />
+              <Mapping SourceColumn="state_number" DataSetColumn="state_number" />
+              <Mapping SourceColumn="norm_summer" DataSetColumn="norm_summer" />
+              <Mapping SourceColumn="norm_winter" DataSetColumn="norm_winter" />
+              <Mapping SourceColumn="FIO" DataSetColumn="FIO" />
+              <Mapping SourceColumn="name_oil" DataSetColumn="name_oil" />
+              <Mapping SourceColumn="com_s" DataSetColumn="com_s" />
+              <Mapping SourceColumn="com_e" DataSetColumn="com_e" />
+              <Mapping SourceColumn="date_s" DataSetColumn="date_s" />
+              <Mapping SourceColumn="date_e" DataSetColumn="date_e" />
+              <Mapping SourceColumn="oil_s" DataSetColumn="oil_s" />
+              <Mapping SourceColumn="oil_e" DataSetColumn="oil_e" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -361,7 +390,7 @@
   <xs:element name="mainDataSet12" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mainDataSet12" msprop:Generator_UserDSName="mainDataSet12">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="car" msprop:Generator_TableClassName="carDataTable" msprop:Generator_TableVarName="tablecar" msprop:Generator_RowChangedName="carRowChanged" msprop:Generator_TablePropName="car" msprop:Generator_RowDeletingName="carRowDeleting" msprop:Generator_RowChangingName="carRowChanging" msprop:Generator_RowEvHandlerName="carRowChangeEventHandler" msprop:Generator_RowDeletedName="carRowDeleted" msprop:Generator_RowClassName="carRow" msprop:Generator_UserTableName="car" msprop:Generator_RowEvArgName="carRowChangeEvent">
+        <xs:element name="car" msprop:Generator_TableClassName="carDataTable" msprop:Generator_TableVarName="tablecar" msprop:Generator_TablePropName="car" msprop:Generator_RowDeletingName="carRowDeleting" msprop:Generator_RowChangingName="carRowChanging" msprop:Generator_RowEvHandlerName="carRowChangeEventHandler" msprop:Generator_RowDeletedName="carRowDeleted" msprop:Generator_UserTableName="car" msprop:Generator_RowChangedName="carRowChanged" msprop:Generator_RowEvArgName="carRowChangeEvent" msprop:Generator_RowClassName="carRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_car" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_car" msprop:Generator_ColumnPropNameInRow="id_car" msprop:Generator_ColumnPropNameInTable="id_carColumn" msprop:Generator_UserColumnName="id_car" type="xs:int" />
@@ -387,7 +416,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="drivers" msprop:Generator_TableClassName="driversDataTable" msprop:Generator_TableVarName="tabledrivers" msprop:Generator_RowChangedName="driversRowChanged" msprop:Generator_TablePropName="drivers" msprop:Generator_RowDeletingName="driversRowDeleting" msprop:Generator_RowChangingName="driversRowChanging" msprop:Generator_RowEvHandlerName="driversRowChangeEventHandler" msprop:Generator_RowDeletedName="driversRowDeleted" msprop:Generator_RowClassName="driversRow" msprop:Generator_UserTableName="drivers" msprop:Generator_RowEvArgName="driversRowChangeEvent">
+        <xs:element name="drivers" msprop:Generator_TableClassName="driversDataTable" msprop:Generator_TableVarName="tabledrivers" msprop:Generator_TablePropName="drivers" msprop:Generator_RowDeletingName="driversRowDeleting" msprop:Generator_RowChangingName="driversRowChanging" msprop:Generator_RowEvHandlerName="driversRowChangeEventHandler" msprop:Generator_RowDeletedName="driversRowDeleted" msprop:Generator_UserTableName="drivers" msprop:Generator_RowChangedName="driversRowChanged" msprop:Generator_RowEvArgName="driversRowChangeEvent" msprop:Generator_RowClassName="driversRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_drivers" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_drivers" msprop:Generator_ColumnPropNameInRow="id_drivers" msprop:Generator_ColumnPropNameInTable="id_driversColumn" msprop:Generator_UserColumnName="id_drivers" type="xs:int" />
@@ -408,7 +437,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="oil" msprop:Generator_TableClassName="oilDataTable" msprop:Generator_TableVarName="tableoil" msprop:Generator_RowChangedName="oilRowChanged" msprop:Generator_TablePropName="oil" msprop:Generator_RowDeletingName="oilRowDeleting" msprop:Generator_RowChangingName="oilRowChanging" msprop:Generator_RowEvHandlerName="oilRowChangeEventHandler" msprop:Generator_RowDeletedName="oilRowDeleted" msprop:Generator_RowClassName="oilRow" msprop:Generator_UserTableName="oil" msprop:Generator_RowEvArgName="oilRowChangeEvent">
+        <xs:element name="oil" msprop:Generator_TableClassName="oilDataTable" msprop:Generator_TableVarName="tableoil" msprop:Generator_TablePropName="oil" msprop:Generator_RowDeletingName="oilRowDeleting" msprop:Generator_RowChangingName="oilRowChanging" msprop:Generator_RowEvHandlerName="oilRowChangeEventHandler" msprop:Generator_RowDeletedName="oilRowDeleted" msprop:Generator_UserTableName="oil" msprop:Generator_RowChangedName="oilRowChanged" msprop:Generator_RowEvArgName="oilRowChangeEvent" msprop:Generator_RowClassName="oilRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_oil" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_oil" msprop:Generator_ColumnPropNameInRow="id_oil" msprop:Generator_ColumnPropNameInTable="id_oilColumn" msprop:Generator_UserColumnName="id_oil" type="xs:int" />
@@ -422,7 +451,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="type_car" msprop:Generator_TableClassName="type_carDataTable" msprop:Generator_TableVarName="tabletype_car" msprop:Generator_RowChangedName="type_carRowChanged" msprop:Generator_TablePropName="type_car" msprop:Generator_RowDeletingName="type_carRowDeleting" msprop:Generator_RowChangingName="type_carRowChanging" msprop:Generator_RowEvHandlerName="type_carRowChangeEventHandler" msprop:Generator_RowDeletedName="type_carRowDeleted" msprop:Generator_RowClassName="type_carRow" msprop:Generator_UserTableName="type_car" msprop:Generator_RowEvArgName="type_carRowChangeEvent">
+        <xs:element name="type_car" msprop:Generator_TableClassName="type_carDataTable" msprop:Generator_TableVarName="tabletype_car" msprop:Generator_TablePropName="type_car" msprop:Generator_RowDeletingName="type_carRowDeleting" msprop:Generator_RowChangingName="type_carRowChanging" msprop:Generator_RowEvHandlerName="type_carRowChangeEventHandler" msprop:Generator_RowDeletedName="type_carRowDeleted" msprop:Generator_UserTableName="type_car" msprop:Generator_RowChangedName="type_carRowChanged" msprop:Generator_RowEvArgName="type_carRowChangeEvent" msprop:Generator_RowClassName="type_carRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_typecar" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_typecar" msprop:Generator_ColumnPropNameInRow="id_typecar" msprop:Generator_ColumnPropNameInTable="id_typecarColumn" msprop:Generator_UserColumnName="id_typecar" type="xs:int" />
@@ -436,7 +465,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Запрос1" msprop:Generator_TableClassName="Запрос1DataTable" msprop:Generator_TableVarName="tableЗапрос1" msprop:Generator_RowChangedName="Запрос1RowChanged" msprop:Generator_TablePropName="Запрос1" msprop:Generator_RowDeletingName="Запрос1RowDeleting" msprop:Generator_RowChangingName="Запрос1RowChanging" msprop:Generator_RowEvHandlerName="Запрос1RowChangeEventHandler" msprop:Generator_RowDeletedName="Запрос1RowDeleted" msprop:Generator_RowClassName="Запрос1Row" msprop:Generator_UserTableName="Запрос1" msprop:Generator_RowEvArgName="Запрос1RowChangeEvent">
+        <xs:element name="Запрос1" msprop:Generator_TableClassName="Запрос1DataTable" msprop:Generator_TableVarName="tableЗапрос1" msprop:Generator_TablePropName="Запрос1" msprop:Generator_RowDeletingName="Запрос1RowDeleting" msprop:Generator_RowChangingName="Запрос1RowChanging" msprop:Generator_RowEvHandlerName="Запрос1RowChangeEventHandler" msprop:Generator_RowDeletedName="Запрос1RowDeleted" msprop:Generator_UserTableName="Запрос1" msprop:Generator_RowChangedName="Запрос1RowChanged" msprop:Generator_RowEvArgName="Запрос1RowChangeEvent" msprop:Generator_RowClassName="Запрос1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_car" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_car" msprop:Generator_ColumnPropNameInRow="id_car" msprop:Generator_ColumnPropNameInTable="id_carColumn" msprop:Generator_UserColumnName="id_car" type="xs:int" minOccurs="0" />
@@ -468,7 +497,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="car_report" msprop:Generator_TableClassName="car_reportDataTable" msprop:Generator_TableVarName="tablecar_report" msprop:Generator_RowChangedName="car_reportRowChanged" msprop:Generator_TablePropName="car_report" msprop:Generator_RowDeletingName="car_reportRowDeleting" msprop:Generator_RowChangingName="car_reportRowChanging" msprop:Generator_RowEvHandlerName="car_reportRowChangeEventHandler" msprop:Generator_RowDeletedName="car_reportRowDeleted" msprop:Generator_RowClassName="car_reportRow" msprop:Generator_UserTableName="car_report" msprop:Generator_RowEvArgName="car_reportRowChangeEvent">
+        <xs:element name="car_report" msprop:Generator_TableClassName="car_reportDataTable" msprop:Generator_TableVarName="tablecar_report" msprop:Generator_TablePropName="car_report" msprop:Generator_RowDeletingName="car_reportRowDeleting" msprop:Generator_RowChangingName="car_reportRowChanging" msprop:Generator_RowEvHandlerName="car_reportRowChangeEventHandler" msprop:Generator_RowDeletedName="car_reportRowDeleted" msprop:Generator_UserTableName="car_report" msprop:Generator_RowChangedName="car_reportRowChanged" msprop:Generator_RowEvArgName="car_reportRowChangeEvent" msprop:Generator_RowClassName="car_reportRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="name_car" msprop:Generator_ColumnVarNameInTable="columnname_car" msprop:Generator_ColumnPropNameInRow="name_car" msprop:Generator_ColumnPropNameInTable="name_carColumn" msprop:Generator_UserColumnName="name_car" minOccurs="0">
@@ -505,7 +534,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="car_report_l" msprop:Generator_TableClassName="car_report_lDataTable" msprop:Generator_TableVarName="tablecar_report_l" msprop:Generator_TablePropName="car_report_l" msprop:Generator_RowDeletingName="car_report_lRowDeleting" msprop:Generator_RowChangingName="car_report_lRowChanging" msprop:Generator_RowEvHandlerName="car_report_lRowChangeEventHandler" msprop:Generator_RowDeletedName="car_report_lRowDeleted" msprop:Generator_UserTableName="car_report_l" msprop:Generator_RowChangedName="car_report_lRowChanged" msprop:Generator_RowEvArgName="car_report_lRowChangeEvent" msprop:Generator_RowClassName="car_report_lRow">
+        <xs:element name="car_report_l" msprop:Generator_TableClassName="car_report_lDataTable" msprop:Generator_TableVarName="tablecar_report_l" msprop:Generator_RowChangedName="car_report_lRowChanged" msprop:Generator_TablePropName="car_report_l" msprop:Generator_RowDeletingName="car_report_lRowDeleting" msprop:Generator_RowChangingName="car_report_lRowChanging" msprop:Generator_RowEvHandlerName="car_report_lRowChangeEventHandler" msprop:Generator_RowDeletedName="car_report_lRowDeleted" msprop:Generator_RowClassName="car_report_lRow" msprop:Generator_UserTableName="car_report_l" msprop:Generator_RowEvArgName="car_report_lRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="type_car" msprop:Generator_ColumnVarNameInTable="columntype_car" msprop:Generator_ColumnPropNameInRow="type_car" msprop:Generator_ColumnPropNameInTable="type_carColumn" msprop:Generator_UserColumnName="type_car" minOccurs="0">
@@ -542,7 +571,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="car_report_m" msprop:Generator_TableClassName="car_report_mDataTable" msprop:Generator_TableVarName="tablecar_report_m" msprop:Generator_TablePropName="car_report_m" msprop:Generator_RowDeletingName="car_report_mRowDeleting" msprop:Generator_RowChangingName="car_report_mRowChanging" msprop:Generator_RowEvHandlerName="car_report_mRowChangeEventHandler" msprop:Generator_RowDeletedName="car_report_mRowDeleted" msprop:Generator_UserTableName="car_report_m" msprop:Generator_RowChangedName="car_report_mRowChanged" msprop:Generator_RowEvArgName="car_report_mRowChangeEvent" msprop:Generator_RowClassName="car_report_mRow">
+        <xs:element name="car_report_m" msprop:Generator_TableClassName="car_report_mDataTable" msprop:Generator_TableVarName="tablecar_report_m" msprop:Generator_RowChangedName="car_report_mRowChanged" msprop:Generator_TablePropName="car_report_m" msprop:Generator_RowDeletingName="car_report_mRowDeleting" msprop:Generator_RowChangingName="car_report_mRowChanging" msprop:Generator_RowEvHandlerName="car_report_mRowChangeEventHandler" msprop:Generator_RowDeletedName="car_report_mRowDeleted" msprop:Generator_RowClassName="car_report_mRow" msprop:Generator_UserTableName="car_report_m" msprop:Generator_RowEvArgName="car_report_mRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="type_car" msprop:Generator_ColumnVarNameInTable="columntype_car" msprop:Generator_ColumnPropNameInRow="type_car" msprop:Generator_ColumnPropNameInTable="type_carColumn" msprop:Generator_UserColumnName="type_car" minOccurs="0">
@@ -579,7 +608,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="car_report_t" msprop:Generator_TableClassName="car_report_tDataTable" msprop:Generator_TableVarName="tablecar_report_t" msprop:Generator_TablePropName="car_report_t" msprop:Generator_RowDeletingName="car_report_tRowDeleting" msprop:Generator_RowChangingName="car_report_tRowChanging" msprop:Generator_RowEvHandlerName="car_report_tRowChangeEventHandler" msprop:Generator_RowDeletedName="car_report_tRowDeleted" msprop:Generator_UserTableName="car_report_t" msprop:Generator_RowChangedName="car_report_tRowChanged" msprop:Generator_RowEvArgName="car_report_tRowChangeEvent" msprop:Generator_RowClassName="car_report_tRow">
+        <xs:element name="car_report_t" msprop:Generator_TableClassName="car_report_tDataTable" msprop:Generator_TableVarName="tablecar_report_t" msprop:Generator_RowChangedName="car_report_tRowChanged" msprop:Generator_TablePropName="car_report_t" msprop:Generator_RowDeletingName="car_report_tRowDeleting" msprop:Generator_RowChangingName="car_report_tRowChanging" msprop:Generator_RowEvHandlerName="car_report_tRowChangeEventHandler" msprop:Generator_RowDeletedName="car_report_tRowDeleted" msprop:Generator_RowClassName="car_report_tRow" msprop:Generator_UserTableName="car_report_t" msprop:Generator_RowEvArgName="car_report_tRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="type_car" msprop:Generator_ColumnVarNameInTable="columntype_car" msprop:Generator_ColumnPropNameInRow="type_car" msprop:Generator_ColumnPropNameInTable="type_carColumn" msprop:Generator_UserColumnName="type_car" minOccurs="0">
@@ -613,6 +642,85 @@
               <xs:element name="norm_summer" msprop:Generator_ColumnVarNameInTable="columnnorm_summer" msprop:Generator_ColumnPropNameInRow="norm_summer" msprop:Generator_ColumnPropNameInTable="norm_summerColumn" msprop:Generator_UserColumnName="norm_summer" type="xs:float" minOccurs="0" />
               <xs:element name="norm_winter" msprop:Generator_ColumnVarNameInTable="columnnorm_winter" msprop:Generator_ColumnPropNameInRow="norm_winter" msprop:Generator_ColumnPropNameInTable="norm_winterColumn" msprop:Generator_UserColumnName="norm_winter" type="xs:float" minOccurs="0" />
               <xs:element name="coint_oil" msprop:Generator_ColumnVarNameInTable="columncoint_oil" msprop:Generator_ColumnPropNameInRow="coint_oil" msprop:Generator_ColumnPropNameInTable="coint_oilColumn" msprop:Generator_UserColumnName="coint_oil" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReportPut" msprop:Generator_TableClassName="ReportPutDataTable" msprop:Generator_TableVarName="tableReportPut" msprop:Generator_TablePropName="ReportPut" msprop:Generator_RowDeletingName="ReportPutRowDeleting" msprop:Generator_RowChangingName="ReportPutRowChanging" msprop:Generator_RowEvHandlerName="ReportPutRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportPutRowDeleted" msprop:Generator_UserTableName="ReportPut" msprop:Generator_RowChangedName="ReportPutRowChanged" msprop:Generator_RowEvArgName="ReportPutRowChangeEvent" msprop:Generator_RowClassName="ReportPutRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_put" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_put" msprop:Generator_ColumnPropNameInRow="id_put" msprop:Generator_ColumnPropNameInTable="id_putColumn" msprop:Generator_UserColumnName="id_put" type="xs:int" minOccurs="0" />
+              <xs:element name="name_car" msprop:Generator_ColumnVarNameInTable="columnname_car" msprop:Generator_ColumnPropNameInRow="name_car" msprop:Generator_ColumnPropNameInTable="name_carColumn" msprop:Generator_UserColumnName="name_car" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="state_number" msprop:Generator_ColumnVarNameInTable="columnstate_number" msprop:Generator_ColumnPropNameInRow="state_number" msprop:Generator_ColumnPropNameInTable="state_numberColumn" msprop:Generator_UserColumnName="state_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="norm_summer" msprop:Generator_ColumnVarNameInTable="columnnorm_summer" msprop:Generator_ColumnPropNameInRow="norm_summer" msprop:Generator_ColumnPropNameInTable="norm_summerColumn" msprop:Generator_UserColumnName="norm_summer" type="xs:float" minOccurs="0" />
+              <xs:element name="norm_winter" msprop:Generator_ColumnVarNameInTable="columnnorm_winter" msprop:Generator_ColumnPropNameInRow="norm_winter" msprop:Generator_ColumnPropNameInTable="norm_winterColumn" msprop:Generator_UserColumnName="norm_winter" type="xs:float" minOccurs="0" />
+              <xs:element name="FIO" msprop:Generator_ColumnVarNameInTable="columnFIO" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_UserColumnName="FIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_oil" msprop:Generator_ColumnVarNameInTable="columnname_oil" msprop:Generator_ColumnPropNameInRow="name_oil" msprop:Generator_ColumnPropNameInTable="name_oilColumn" msprop:Generator_UserColumnName="name_oil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="com_s" msprop:Generator_ColumnVarNameInTable="columncom_s" msprop:Generator_ColumnPropNameInRow="com_s" msprop:Generator_ColumnPropNameInTable="com_sColumn" msprop:Generator_UserColumnName="com_s" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="com_e" msprop:Generator_ColumnVarNameInTable="columncom_e" msprop:Generator_ColumnPropNameInRow="com_e" msprop:Generator_ColumnPropNameInTable="com_eColumn" msprop:Generator_UserColumnName="com_e" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_s" msprop:Generator_ColumnVarNameInTable="columndate_s" msprop:Generator_ColumnPropNameInRow="date_s" msprop:Generator_ColumnPropNameInTable="date_sColumn" msprop:Generator_UserColumnName="date_s" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_e" msprop:Generator_ColumnVarNameInTable="columndate_e" msprop:Generator_ColumnPropNameInRow="date_e" msprop:Generator_ColumnPropNameInTable="date_eColumn" msprop:Generator_UserColumnName="date_e" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="oil_s" msprop:Generator_ColumnVarNameInTable="columnoil_s" msprop:Generator_ColumnPropNameInRow="oil_s" msprop:Generator_ColumnPropNameInTable="oil_sColumn" msprop:Generator_UserColumnName="oil_s" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="oil_e" msprop:Generator_ColumnVarNameInTable="columnoil_e" msprop:Generator_ColumnPropNameInRow="oil_e" msprop:Generator_ColumnPropNameInTable="oil_eColumn" msprop:Generator_UserColumnName="oil_e" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
