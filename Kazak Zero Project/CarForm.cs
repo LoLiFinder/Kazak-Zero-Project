@@ -61,7 +61,7 @@ namespace Kazak_Zero_Project
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBox2.Text) && !String.IsNullOrEmpty(textBox3.Text) && !String.IsNullOrEmpty(maskedTextBox1.Text) && !String.IsNullOrEmpty(maskedTextBox2.Text) && !String.IsNullOrEmpty(maskedTextBox3.Text))
+            if (!String.IsNullOrEmpty(textBox2.Text) && !String.IsNullOrEmpty(textBox3.Text) && maskedTextBox1.MaskCompleted && maskedTextBox2.MaskCompleted && maskedTextBox3.MaskCompleted)
             {
                 if (MessageBox.Show("Добавить: " + textBox2.Text + "\nКатегории: " + textBox2.Text, "Добавление ТС", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {

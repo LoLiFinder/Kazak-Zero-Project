@@ -256,7 +256,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CarTRForm";
-            this.Text = "Трактора автомобили";
+            this.Text = "Трактора";
             this.Load += new System.EventHandler(this.CarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
